@@ -1,11 +1,11 @@
 /* Paleta de colores */
 :root {
-    --primary-accent: #1e3a8a; /* Azul oscuro como color principal */
+    --primary-accent: #1e3a8a; 
     --background-dark: #0d1117; 
-    --sidebar-dark: rgba(13, 17, 23, 0.9); /* Gris oscuro translúcido */
-    --text-light: #e5e5e5; /* Blanco suave para el texto */
-    --text-muted: #a6a6a6; /* Gris para textos secundarios */
-    --border-color: #21262d; /* Gris para bordes */
+    --sidebar-dark: rgba(13, 17, 23, 0.9); 
+    --text-light: #e5e5e5; 
+    --text-muted: #a6a6a6; 
+    --border-color: #21262d; 
     --accent-light: #2563eb; 
 }
 
@@ -144,23 +144,22 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1; /* Para que el video quede detrás del contenido */
+    z-index: -1;
 }
 
 .video-background video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que el video cubra todo el contenedor */
+    object-fit: cover; 
 }
 
 /* Contenido principal */
 
 
-
 /* Sidebar */
 .sidebar {
-    background-color: var(--sidebar-dark); /* Fondo transparente */
-    border: 1px solid var(--border-color); /* Define un borde para separación */
+    background-color: var(--sidebar-dark); 
+    border: 1px solid var(--border-color); 
     width: 30%;
     height: 90vh;
     padding: 30px;

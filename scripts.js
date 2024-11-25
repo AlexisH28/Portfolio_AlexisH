@@ -31,5 +31,5 @@ videoElement.onended = () => {
 introVideo.style.display = 'none';
 
 mainContainer.style.display = 'flex';
-
 };
+
