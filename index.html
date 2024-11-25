@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="intro-video">
+    <video id="video" autoplay muted>
+        <source src="/IMG/intro.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+</div>
+
+  <div class="container">
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+          <source src="/IMG/Fondo.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+      </video>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="/IMG/pngwing.com (1).png" alt="Profile Picture" class="profile-img">
+        <h1 class="name">Alexis Rafael Hernandez Tocora</h1>
+        <p class="title">Software Engineer<br>Full Stack Developer</p>
+      </div>
+      <div class="cv">
+        <a href="ruta/a/tu/CV.pdf" download="Mi_CV" class="btn-descargar">Descargar CV</a>
+    </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <div class="tabs">
+        <button class="tab active">About</button>
+        <button class="tab">info</button>
+        <button class="tab">Projects</button>
+        <button class="tab">Contact</button>
+
+      </div>
+      <section class="about">
+        <h2>About</h2>
+        <p>
+            Experienced technology professional with a proven track record of success as a Software Engineer. Possessing 
+            strong analytical thinking and decision-making skills, I excel at tackling complex challenges. Proactive and
+            diligent, I continuously seek opportunities for growth and stay updated on emerging trends. My commitment to
+            staying at the forefront of the industry allows me to deliver innovative solutions. I am eager to join a
+            dynamic team, contribute meaningfully, and drive business growth.</p>
+        <div class="skills">
+          <img src="/IMG/py.png" alt="Python">
+          <img src="/IMG/js.png" alt="JavaScript">
+          <img src="/IMG/jv.png" alt="Java">
+          <img src="/IMG/linux.png" alt="Linux">
+          <img src="/IMG/mysql.png" alt="Postgrest">
+          <img src="/IMG/postgreSQL.png" alt="Mysql">
+
+        </div>
+      </section>
+      <section class="info">
+        <h2>Info</h2>
+        <div class="info-cards">
+          <article class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <h3>Misión</h3>
+                      <p>Descubre mi misión</p>
+                  </div>
+                  <div class="card-back">
+                      <p>Brindar soluciones innovadoras y de alta calidad para superar las expectativas de mis clientes, contribuyendo al desarrollo sostenible.</p>
+                  </div>
+              </div>
+          </article>
+      
+          <article class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <h3>Visión</h3>
+                      <p>Descubre mi visión</p>
+                  </div>
+                  <div class="card-back">
+                      <p>Ser líder global en mi sector, reconocido por mi excelencia y compromiso .</p>
+                  </div>
+              </div>
+          </article>
+      
+          <article class="card">
+              <div class="card-inner">
+                  <div class="card-front">
+                      <h3>Valores</h3>
+                      <p>Descubre mis valores</p>
+                  </div>
+                  <div class="card-back">
+                      <p>Integridad, innovación, sostenibilidad, trabajo en equipo y respeto.</p>
+                  </div>
+              </div>
+          </article>
+        </div>
+      </section>
+      <section class="projects">
+            <h2>Projects</h2>
+            <div class="project-cards">
+              <!-- Card 1 -->
+              <div class="project-card">
+                <div class="project-card-inner">
+                  <div class="project-card-front">
+                    <img src="/IMG/images.jpg" alt="Project 1" class="project-image">
+                  </div>
+                  <div class="project-card-back">
+                    <div class="project-info">
+                      <h3>Project 1</h3>
+                      <p>Descripción del proyecto 1.</p>
+                      <a href="#" class="project-link">Ver más</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="project-card">
+                <div class="project-card-inner">
+                  <div class="project-card-front">
+                    <img src="/IMG/images.jpg" alt="Project 2" class="project-image">
+                  </div>
+                  <div class="project-card-back">
+                    <div class="project-info">
+                      <h3>Project 2</h3>
+                      <p>Descripción del proyecto 2.</p>
+                      <a href="#" class="project-link">Ver más</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Más tarjetas de proyectos... -->
+            </div>
+      </section>
+      <section class="contact">
+            <h2>Contact</h2>
+                    <p><strong>Email:</strong> Alexis@gmail.com</p>
+                    <p><strong>Phone:</strong>313231323 </p>
+                    <p><strong>LinkedIn:</strong> <a href="#">Alexis Rafael Hernandez</a></p>
+                    <p><strong>Location:</strong> Bucaramanga, Colombia</p>
+      </section>
+    </main>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
