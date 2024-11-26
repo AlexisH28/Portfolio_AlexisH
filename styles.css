@@ -173,8 +173,8 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     background: var(--second-bg-color);
+    column-gap: 2vw;
 }
 
 .about-img {
@@ -183,9 +183,19 @@ span {
     overflow: hidden;
 }
 
+.about-img img{
+    width: -webkit-fill-available;
+    border: 5px solid;
+    border-radius: 190px;
+}
+
 .heading {
     text-align: center;
     font-size: 4.5rem;
+}
+
+.about-content {
+    width:65vw;
 }
 
 .about-content h2 {
@@ -561,6 +571,12 @@ span {
     }
 }
 
+@media (max-width: 1000px) {
+    .about-img{
+        display: none;
+    }
+}
+
 @media (max-width: 991px) {
     .header {
         padding: 2rem 3%;
@@ -821,6 +837,7 @@ span {
 }
 
 @media (max-height: 450px) and (orientation: landscape) {
+
     .skills {
         min-height: auto;
         padding: 3rem 2%;
