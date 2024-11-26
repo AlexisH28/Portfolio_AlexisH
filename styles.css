@@ -193,6 +193,57 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.skills {
+    background: var(--second-bg-color);
+    padding: 10rem 9%;
+    text-align: center;
+}
+
+.skills .heading {
+    font-size: 4.5rem;
+    color: var(--text-color);
+    margin-bottom: 5rem;
+}
+
+.skills .heading span {
+    color: var(--main-color);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skills-box {
+    flex: 1 1 25rem;
+    background: var(--bg-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skills-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.skills-box img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    margin-bottom: 2rem;
+    animation: floatImage 3s ease-in-out infinite; /* Reutilizando animación existente */
+}
+
+.skills-box h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
 .services h2{
     margin-bottom: 5rem;
 }
@@ -399,6 +450,14 @@ span {
         padding: 10rem 3% 2rem;
     }
 
+    .skills-container {
+        gap: 1.5rem;
+    }
+
+    .skills-box {
+        flex: 1 1 20rem;
+    }
+
     .services {
         padding-bottom: 7rem;
     }
@@ -466,6 +525,11 @@ span {
     .about img {
         width: 70vw;
         margin-top: 4rem;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
     }
 
     .services h2 {
