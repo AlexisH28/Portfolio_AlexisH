@@ -187,6 +187,12 @@ span {
     width: -webkit-fill-available;
     border: 5px solid;
     border-radius: 190px;
+    filter: brightness(0.9);
+    box-shadow: 0 0 40px rgba(0, 191, 255, 0.6),
+    0 0 30px rgba(173, 216, 230, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: filter 0.3s ease;
+    margin: 2vw;
 }
 
 .heading {
@@ -580,7 +586,7 @@ span {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #f0f0f0;
+    background: #2ea3a1;
 }
 
 /* RESPONSIVE */
