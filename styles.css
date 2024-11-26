@@ -179,6 +179,8 @@ span {
 
 .about-img {
     width: 35vw;
+    height: 35vw;
+    overflow: hidden;
 }
 
 .heading {
