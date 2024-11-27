@@ -61,6 +61,10 @@ section {
     position: relative;
 }
 
+.navbar.active {
+    display: block;
+}
+
 .header .sticky {
     border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
@@ -74,7 +78,7 @@ section {
 
 .navbar a {
     font-size: 1.7rem;
-    color: var(--text-color);
+    color: var(--main-color);
     margin-left: 4rem;
     transition: 0.3s;
 }
@@ -497,6 +501,11 @@ span {
     color: var(--text-color);
 }
 
+.bx-link-external {
+    font-size: 2rem !important;
+    line-height: 1;
+}
+
 .contact h2 {
     margin-bottom: 3rem;
 }
@@ -664,24 +673,40 @@ span {
     .navbar {
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
+        left: -80%; 
+        width: 200%;
         padding: 1rem 3%;
         background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         display: none;
     }
 
-    .navbar .active {
-        display: block; 
+    .navbar a:hover,
+    .navbar a.active {
+        color: var(--text-color);
+    }
+
+    #menu-icon.bx-x {
+        transform: rotate(90deg); 
+        transition: 0.3s ease;
+    }
+
+    .navbar .active { 
+        left: 0;
     }
 
     .navbar a {
         display: block;
+        color: var(--main-color);
         font-size: 2rem;
         margin: 3rem 0;
         text-align: center;
+        left: 0;
     }
 
     .home {
