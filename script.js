@@ -2,32 +2,32 @@ import emailjs from 'emailjs-com';
 
 // Toggle Icon NavBar
 document.addEventListener('DOMContentLoaded', () => {
-  let menuIcon = document.querySelector('#menu-icon');
-  let navbar = document.querySelector('.navbar');
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
 
-  menuIcon.onclick = () => {
-      menuIcon.classList.toggle('bx-x');
-      navbar.classList.toggle('active');
-  };  
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+};  
 });
 // Scroll Sections
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
-  sections.forEach(sec => {
+    sections.forEach(sec => {
     let top = window.scrollY;
     let offset = sec.offsetTop - 150;
     let height = sec.offsetHeight;
     let id = sec.getAttribute('id')
     
 
-      if(top >= offset && top < offset + height) {
-          navLinks.forEach(links => {
-              links.classList.remove('active');
-              document.querySelector('header nav a[href*=' + id + ']').classList.add('active'); 
+    if(top >= offset && top < offset + height) {
+        navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active'); 
             });
-          };
+        };
     });
 
     // Sticky NavBar
@@ -64,35 +64,35 @@ const typed = new Typed('.multiple-text', {
 
 // Section Contact Me
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("form").addEventListener("submit", function (event) {
-      event.preventDefault();
+    document.querySelector("form").addEventListener("submit", function (event) {
+    event.preventDefault();
 
       // Get the values ​​of the form fields
-      let fullName = document.querySelector("input[placeholder='Full Name']").value;
-      let email = document.querySelector("input[placeholder='Email Address']").value;
-      let mobile = document.querySelector("input[placeholder='Mobile Number']").value;
-      let subject = document.querySelector("input[placeholder='Email Subject']").value;
-      let message = document.querySelector("textarea").value;
+    let fullName = document.querySelector("input[placeholder='Full Name']").value;
+    let email = document.querySelector("input[placeholder='Email Address']").value;
+    let mobile = document.querySelector("input[placeholder='Mobile Number']").value;
+    let subject = document.querySelector("input[placeholder='Email Subject']").value;
+    let message = document.querySelector("textarea").value;
 
       // Validate that the fields are not empty
-      if (!fullName || !email || !mobile || !subject || !message) {
-          alert("Please complete all fields.");
-          return;
-      }
+    if (!fullName || !email || !mobile || !subject || !message) {
+        alert("Please complete all fields.");
+        return;
+    }
 
-      // EmailJS Configuration
-      emailjs.send("service_7x1ww9j", "template_p1c3fmk", {
-          from_name: fullName,
-          from_email: email,
-          mobile_number: mobile,
-          subject: subject,
-          message: message
-      }, "MFdMWYeYwMCsLFXgu10IB")
-      .then(function(response) {
-          alert("Message sent successfully!");
-          document.querySelector("form").reset(); 
-      }, function(error) {
-          alert("There was an error sending the message: " + error.text);
-      });
-  });
+    // EmailJS Configuration
+    emailjs.send("service_7x1ww9j", "template_p1c3fmk", {
+        from_name: fullName,
+        from_email: email,
+        mobile_number: mobile,
+        subject: subject,
+        message: message
+    }, "MFdMWYeYwMCsLFXgu10IB")
+    .then(function(response) {
+        alert("Message sent successfully!");
+        document.querySelector("form").reset(); 
+    }, function(error) {
+        alert("There was an error sending the message: " + error.text);
+    });
+});
 });

@@ -70,10 +70,14 @@ section {
 }
 
 .logo {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-    cursor: default;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 100px; 
+    height: auto;
+    margin-right: 10px; /* Espacio entre el logo y el texto */
 }
 
 .navbar a {
