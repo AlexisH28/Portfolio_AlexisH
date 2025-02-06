@@ -69,11 +69,32 @@ section {
     border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
 
+/* Logo container styles */
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
-    cursor: default;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-img {
+    width: 9rem;
+    height: 9rem;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo:hover .logo-img {
+    filter: drop-shadow(0 0 0.5rem var(--main-color));
 }
 
 .navbar a {
@@ -670,6 +691,25 @@ span {
         display: block;
     }
 
+    .logo {
+        font-size: 4.5rem;
+    }
+
+    .logo-img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .header {
+        position: relative;
+        z-index: 1000;
+    }
+    
+    .navbar.active + .logo {
+        position: relative;
+        z-index: 1001;
+    }
+
     .navbar {
         position: absolute;
         top: 100%;
@@ -820,6 +860,15 @@ span {
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+
+    .logo-img {
+        width: 7rem;
+        height: 7rem;
     }
 
     .contact form .input-box input {
