@@ -1,3 +1,5 @@
+import emailjs from 'emailjs-com';
+
 // Toggle Icon NavBar
 document.addEventListener('DOMContentLoaded', () => {
   let menuIcon = document.querySelector('#menu-icon');
@@ -58,4 +60,39 @@ const typed = new Typed('.multiple-text', {
     backSpeed: 100,
     backDelay: 1000,
     loop: true
+});
+
+// Section Contact Me
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector("form").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Get the values ​​of the form fields
+      let fullName = document.querySelector("input[placeholder='Full Name']").value;
+      let email = document.querySelector("input[placeholder='Email Address']").value;
+      let mobile = document.querySelector("input[placeholder='Mobile Number']").value;
+      let subject = document.querySelector("input[placeholder='Email Subject']").value;
+      let message = document.querySelector("textarea").value;
+
+      // Validate that the fields are not empty
+      if (!fullName || !email || !mobile || !subject || !message) {
+          alert("Please complete all fields.");
+          return;
+      }
+
+      // EmailJS Configuration
+      emailjs.send("service_7x1ww9j", "template_p1c3fmk", {
+          from_name: fullName,
+          from_email: email,
+          mobile_number: mobile,
+          subject: subject,
+          message: message
+      }, "MFdMWYeYwMCsLFXgu10IB")
+      .then(function(response) {
+          alert("Message sent successfully!");
+          document.querySelector("form").reset(); 
+      }, function(error) {
+          alert("There was an error sending the message: " + error.text);
+      });
+  });
 });
