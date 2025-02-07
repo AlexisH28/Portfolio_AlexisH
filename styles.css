@@ -82,8 +82,8 @@ section {
 }
 
 .logo-img {
-    width: 9rem;
-    height: 9rem;
+    width: 7rem;
+    height: 7rem;
     object-fit: contain;
     transition: all 0.3s ease;
 }
