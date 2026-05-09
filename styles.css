@@ -215,6 +215,7 @@ span {
     filter: brightness(0.9);
     box-shadow: 0 0 40px rgba(0, 191, 255, 0.6),
     0 0 30px rgba(173, 216, 230, 0.5);
+    object-position: center 20%;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     transition: filter 0.3s ease;
     margin: 0;
